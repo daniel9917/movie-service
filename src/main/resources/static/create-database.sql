@@ -1,0 +1,17 @@
+DROP SCHEMA IF EXISTS `movie-schema`;
+
+CREATE SCHEMA `movie-schema`;
+
+use `movie-schema`;
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+CREATE TABLE `movie` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(128) DEFAULT NULL,
+    `year` INT NOT NULL DEFAULT 0,
+    `duration` INT NOT NULL DEFAULT 0,
+
+    UNIQUE KEY `MOVIE_NAME_UNIQUE` (`name`),
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
